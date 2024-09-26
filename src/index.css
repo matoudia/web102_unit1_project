@@ -1,0 +1,210 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+    
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 3%;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: pink;
+}
+
+.infos {
+  margin: 5%;
+}
+
+.App{
+  padding: 0;
+  
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+/* for tables */
+th {
+  width: 120px;
+  padding-top:25px;
+  padding-bottom:30px;
+}
+
+td {
+  padding: 5px;
+}
+
+.time {
+  height: 40px;
+}
+
+
+
+/*Styling the activities*/
+
+
+#Activities {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Event {
+  padding: 1%;
+  border-radius: 8px;
+  margin: 1%;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  color: black;
+
+  
+  width: 300px;
+  height: 450px;
+  text-align: center;
+  background-color: rgb(232, 182, 182);
+  
+ 
+}
+
+.event-img {
+  width: 100%;
+  height:300px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #FFFFFF;
+}
+
+
+
+
+/* Desktop layout */
+@media only screen and (min-width: 1024px) {
+  .container {
+      grid-template-columns: 1fr 2fr; /* Example two-column layout for desktop */
+  }
+}
+
+/* Mobile layout */
+@media only screen and (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr; /* Stack everything vertically for mobile */
+  }
+}
+
+
+
+/* styling the header*/
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main header container */
+.header {
+    position: relative;
+    width: 100%;
+    height: 30vh; /* Adjust based on how tall you want the header */
+    background-image: url('./assets/header.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gradient overlay for effect */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)); /* Adds gradient effect */
+    z-index: 1;
+}
+
+/* Text over the image */
+.header-content {
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+    color: #fff;
+    text-align: center;
+}
+
+
+/* Responsive font sizes for smaller screens */
+@media only screen and (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+}
+
+
